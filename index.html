@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Login and Registration
+        </title>
+        
+        
+
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+                </div>
+                <form id="Login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Email Id" id="emailIdLogin"
+                    required>
+                    <input type="text" class="input-field" placeholder="Enter the password" id="passwordLogin"
+                    required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button onclick="loginButtonClick()" type="submit" class="submit-btn">Log In</button>
+                </form>
+                <form id="Register" class="input-group">
+                    <!--<input type="text" class="input-field" placeholder="User Id" id="userIdRegister"
+                    required>--> 
+                    <input type="text" class="input-field" placeholder="Email Id" id="emailIdRegister"
+                    required>
+                    <input type="text" class="input-field" placeholder="Enter the password" id="passwordRegister"
+                    required>
+                    <input type="checkbox" class="check-box"><span>I agree to Terms and Conditions</span>
+                    <button onclick="registerButtonClick()" type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+            <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyAa79kl4Oiv6GDhCrjTyPa9XBH7g7HJVT0",
+                authDomain: "skillgradeup-9ccfa.firebaseapp.com",
+                databaseURL: "https://skillgradeup-9ccfa.firebaseio.com",
+                projectId: "skillgradeup-9ccfa",
+                storageBucket: "skillgradeup-9ccfa.appspot.com",
+                messagingSenderId: "803038841668",
+                appId: "1:803038841668:web:28bd7c2ee84349eb7ca511",
+                measurementId: "G-6TB6CQ3V5H"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            </script>
+         
+        <link rel="stylesheet" href="style.css">
+        
+        <script src="form.js"></script>
+        
+        <script>
+            var x = document.getElementById("Login");
+            var y = document.getElementById("Register");
+            var z = document.getElementById("btn");
+            
+            function register()
+            {
+                x.style.left = "-400px"
+                y.style.left = "50px"
+                z.style.left = "110px"
+            }
+            function login()
+            {
+                x.style.left = "50px"
+                y.style.left = "450px"
+                z.style.left = "0px"
+            }
+        </script>
+    </body>
+</html>
